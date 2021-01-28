@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --title-size: 8vw;
+    --text-size: 4vw;
+    --clr-primary: hsl(300, 43%, 22%);
+    --clr-txt-secondary: hsl(333, 80%, 67%);
+    --clr-txt-accent: hsl(303, 10%, 53%);
+    --clr-bg-secondary: hsl(300, 24%, 96%);
+    --clr-bg-primary: hsl(0, 0%, 100%);
+    --title-size: 7.2vw;
+    --text-size: 3.35vw;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--clr-bg-primary);
+}
+
+h1 {
+    font-size: var(--title-size);
+    font-family: 'Spartan', sans-serif;
+    color: var(--clr-primary);
+}
+
+h2 {
+    line-height: 1.3;
+}
+h2, h3, h4, h5, p {
+    font-size: var(--text-size);
+    font-family: 'Spartan', sans-serif;
+}
+
+.upper-container {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+.intro:first-child {
+    flex: none;
+    width: 100%;
+    padding: 21.5vw 17vw 0vw 17vw;
+}
+
+.intro:nth-child(2) {
+    width: 100%;
+    flex: none;
+    padding: 6.4vw 7.2vw 0vw 6.4vw;
+}
+
+.stars {
+    padding-top: 4.3vw;
+    padding-left: 28vw;
+    flex: none;
+    width: 33vw;
+    justify-content: space-between;
+    display: flex;
+}
+.star {
+    flex: none;
+    background-image: url("images/icon-star.svg");
+    width: 5vw;
+    height: 5vw;  
+    background-size: cover;
+
+}
+.rating {
+    margin-top: 4vw;;
+    border-radius: 1.6vw;;
+    flex: none;
+    min-width: 87vw;
+    min-height: 21vw;
+    background-color: var(--clr-bg-secondary);
+}
+
+
+.lower-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 9.1vw;;
+}
+
+.testimonial {
+    border-radius: 1.6vw;;
+    margin-top: 4vw;
+    display: grid;
+    width: 87vw;
+    height: 66vw;
+    grid-template-columns: 27vw 60vw;
+    grid-template-rows: 13.5vw 13.5vw 60vw;
+
+    background-color: var(--clr-primary);
+}
+
+.testimonial-image {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 50%;
+    max-width: 11vw;
+    max-height: 11vw;
+    margin: 10.4vw 8.3vw 5.6vw 7.7vw;
+}
+
+
+
+.testimonial-name {
+    margin-top: 11.2vw;
+    margin-bottom: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: var(--clr-bg-primary);
+
+}
+
+.testimonial-status {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 2vw;
+    color: var(--clr-txt-secondary);
+    font-weight: 400;
+}
+
+.testimonial-text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 0 8.3vw;
+    color: var(--clr-bg-primary);
+    font-weight: 500;
+}
+
+.attribution {
+    position: absolute;
+    font-size: 1.6vw;
+    font-family: 'Spartan', sans-serif;
+    width: 100%;
+    margin: auto;
+}
+
+.top-image {
+    background-image: url("images/bg-pattern-top-mobile.svg");
+    position: absolute;
+    background-repeat: none;
+    background-size: contain;
+}
