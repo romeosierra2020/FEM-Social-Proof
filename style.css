@@ -19,6 +19,7 @@ html {
     background-color: var(--clr-bg-primary);
 }
 
+
 h1 {
     font-size: var(--title-size);
     font-family: 'Spartan', sans-serif;
@@ -31,6 +32,17 @@ h2 {
 h2, h3, h4, h5, p {
     font-size: var(--text-size);
     font-family: 'Spartan', sans-serif;
+}
+
+.upper-container::before {
+    width: 100vw;
+    height: 361vw;
+    content: "";
+    background: url("images/bg-pattern-top-mobile.svg") top left, url("images/bg-pattern-bottom-mobile.svg") bottom right;
+    background-size: contain;
+    position: absolute;
+    outline: 1px solid red;
+    background-repeat: no-repeat;
 }
 
 .upper-container {
@@ -154,9 +166,3 @@ h2, h3, h4, h5, p {
     margin: auto;
 }
 
-.top-image {
-    background-image: url("images/bg-pattern-top-mobile.svg");
-    position: absolute;
-    background-repeat: none;
-    background-size: contain;
-}
