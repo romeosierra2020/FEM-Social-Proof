@@ -7,8 +7,8 @@
     --clr-txt-accent: hsl(303, 10%, 53%);
     --clr-bg-secondary: hsl(300, 24%, 96%);
     --clr-bg-primary: hsl(0, 0%, 100%);
-    --title-size: 0.422rem;
-    --text-size: 0.211rem;
+    --title-size: 0.43rem;
+    --text-size: 0.16rem;
 }
 
 *, *::before, *::after {
@@ -17,14 +17,32 @@
     box-sizing: border-box;
 }
 html {
-
+    font-size: 15px;
     background-color: var(--clr-bg-primary);
+
+    font-family: 'Spartan', sans-serif;
+}
+body {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    content: "";
+    background: url("images/bg-pattern-top-mobile.svg") top left, url("images/bg-pattern-bottom-mobile.svg") bottom right;
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
 }
 
 
 h1 {
     font-size: var(--title-size);
-    font-family: 'Spartan', sans-serif;
+    line-height: 0.43rem;
     color: var(--clr-primary);
 }
 
@@ -34,88 +52,101 @@ h2 {
 }
 h2, h3, h4, h5, p {
     font-size: var(--text-size);
-    font-family: 'Spartan', sans-serif;
 }
 
-.upper-container::before {
-    width: 100vw;
-    height: 361vw;
-    content: "";
-    background: url("images/bg-pattern-top-mobile.svg") top left, url("images/bg-pattern-bottom-mobile.svg") bottom right;
-    background-size: contain;
-    position: absolute;
-    background-repeat: no-repeat;
+p {
+    line-height: 0.3rem;
+    color: var(--clr-primary);
 }
 
 .upper-container {
-
-    width: 100%;
+    margin: 10px 5.76px;
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    align-content: space-between;
-    flex-direction: column;
+    justify-items: center;
+    max-width: 240px;
 }
 
-.intro:first-child {
-    flex: none;
-    width: 4.35rem;
-    padding: 1.075rem 0.85rem 0rem 0.85rem;
-}
-
-.intro:nth-child(2) {
-    width: 4.35rem;
-    flex: none;
-    padding: 0.32rem 0.36rem 0rem 0.32rem;
-}
-.rating {
+.intro-container {
     display: flex;
     flex-direction: column;
-}
-.stars {
-    padding-top: 0.215rem;
-    margin: auto;
-    flex: none;
-    width: 1.65rem;
-    justify-content: space-between;
-    display: flex;
-}
-.star {
-    flex: none;
-    background-image: url("images/icon-star.svg");
-    width: 0.25rem;
-    height: 0.25rem;
-    background-size: cover;
-
-}
-.rating {
-    margin-top: 4vw;
-    width: 4.35rem;
-    border-radius: 1.6vw;
-    flex: none;
-    background-color: var(--clr-bg-secondary);
+    align-items: center;
+    justify-items: center;
+    max-width: 91.88px;
 }
 
+.title {
+    margin-block: 5.14px;
+    max-width: 79px;
+}
+.intro {
+    max-width: 79px;
+}
 
-.lower-container {
+.ratings-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    flex-direction: column;
     align-items: center;
-    margin-top: 9.1vw;
+    max-width: 116.45px;
+}
+
+.rating {
+    flex: none;
+    width: 100%;
+    height: 1.07rem;
+    margin: 1.65px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-bg-secondary);
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-between;
+    border-radius: 0.2rem;
+    max-width: 94.02px;
+    
+}
+
+.stars {
+    justify-self: center;
+    display: flex;
+    width: 24.6px;
+    height: 3.42px;
+    justify-content: space-between;
+}
+
+.star {
+    height: 0.228rem;
+    width: 0.228rem;
+    background: url("images/icon-star.svg");
+    background-size: cover;
+}
+
+.rating-text {
+    height: var(--text-size);
+}
+
+.lower-container {
+    margin: 10px 5.76px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    max-width: 240px;
 }
 
 .testimonial {
     border-radius: 0.2rem;
-    margin-top: 4vw;
+    margin: 6px;
     display: grid;
-    width: 4.35rem;
+    width: 100%;
+    max-width: 74.79px;
     height: auto;
-    grid-template-columns: 1.8rem auto;
+    grid-template-columns: 8.76px auto;
     grid-template-rows: 0.675rem 0.675rem auto;
-
     background-color: var(--clr-primary);
 }
 
@@ -129,8 +160,6 @@ h2, h3, h4, h5, p {
     max-height: 0.8rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
-
-
 
 .testimonial-name {
     margin-top: 0.7rem;
@@ -164,50 +193,60 @@ h2, h3, h4, h5, p {
 }
 
 .attribution {
-    position: absolute;
-    font-size: 0.105rem;
-    font-family: 'Spartan', sans-serif;
-    width: 100%;
-    margin: auto;
+    text-align: center;
+    font-size: 0.1rem;
 }
 
-@media screen and (min-width: 15rem) {
+@media screen and (min-width: 277px) {
+    body {
+        background: url("images/bg-pattern-top-desktop.svg") top left, url("images/bg-pattern-bottom-desktop.svg") bottom right; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    h1 {
+        font-size: 0.57rem;
+        line-height: 0.57rem;
+    }
     .upper-container {
-        display: flex;
         flex-direction: row;
-        background-color: red;
-
+        text-align: left;
+        justify-content: space-between;
+        max-width: 240px;
+    }
+    .intro-container {
+        flex-grow: 1;
+        max-width: 50%;
+        align-items: flex-start;
+    }
+    .ratings-container {
+        flex-grow: 1;
+    }
+    .rating {
+        height: 0.65rem;
+        flex-direction: row;
     }
     .lower-container {
         flex-direction: row;
+        height: 40vh;
         justify-content: space-between;
     }
-    .lower-container:first-child {
+    .testimonial {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .testimonial-1, .rating-1 {
+        align-self: flex-start;
+        margin-right: 6px;
+    }
+    .testimonial-2, .rating-2 {
+        align-self: center;
+    }
+    .testimonial-3, .rating-3 {
+        align-self: flex-end;
+        margin-left: 6px;
+    }
+    .rating-1 {
         justify-self: flex-start;
-    }
-    .lower-container:nth-child(2) {
-        justify-self: center;
-    }
-    .lower-container:last-child {
-        justify-self: flex-end;
-    }
-    .ratings:first-child {
-        flex: none;        
-        justify-self: flex-start;
-    }
-    .ratings:nth-child(2) {
-        flex: none;
-        justify-self: center;
-    }
-    .ratings:last-child {
-        flex: none;
-        align-self: baseline;
-        justify-self: flex-end;
-    }
-    .upper-container::before {
-    width: 100vw;
-    height: 361vw;
-    content: "";
-    background: url("images/bg-pattern-top-desktop.svg") top left, url("images/bg-pattern-bottom-desktop.svg") bottom right;
     }
 }
